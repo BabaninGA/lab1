@@ -1,10 +1,17 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Task4{
     public static void main (String [] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Введите номер месяца");
-        int a = in.nextInt();
+        int a=0;
+        try{
+            Scanner in = new Scanner(System.in);
+            System.out.println("Введите номер месяца:");
+            a = in.nextInt();
+            in.close();in.close();}
+        catch(InputMismatchException e){
+            System.out.println("Данная программа может работать только с целыми числами");
+            System.exit(1);}
         switch (a){
             case 1,2,12:
                 System.out.println("Время года - зима");
