@@ -8,7 +8,7 @@ public class Task4{
             Scanner in = new Scanner(System.in);
             System.out.println("Введите номер месяца:");
             a = in.nextInt();
-            in.close();in.close();}
+            in.close();}
         catch(InputMismatchException e){
             System.out.println("Данная программа может работать только с целыми числами");
             System.exit(1);}
